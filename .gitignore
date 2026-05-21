@@ -1,0 +1,24 @@
+.DS_Store
+
+# Build and Release Folders
+bin/
+bin-debug/
+bin-release/
+.DS_Store
+node_modules
+dist
+tmp
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Hugo
+public/
+
+# Backup Files
