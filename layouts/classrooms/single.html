@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto px-4 py-12">
+    <header class="mb-8 pb-8 border-b border-slate-200">
+        <span class="text-sm font-bold uppercase tracking-wider text-indigo-600">{{ .Params.subject }}</span>
+        <h1 class="text-4xl font-black text-slate-900 mt-2 mb-4">{{ .Title }}</h1>
+        
+        <!-- Metadata Sidebar -->
+        <div class="flex flex-wrap gap-6 text-sm font-medium text-slate-600 bg-slate-100 p-4 rounded-lg mt-4">
+            <div>⏰ <span class="font-bold">Schedule:</span> {{ .Params.schedule }}</div>
+            <div>👶 <span class="font-bold">Target Age:</span> {{ .Params.age_group }}</div>
+            <div>💰 <span class="font-bold">Tuition:</span> {{ .Params.cost }}</div>
+        </div>
+    </header>
+
+    <!-- Main Content Body from Markdown -->
+    <div class="prose max-w-none prose-slate prose-indigo">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}
