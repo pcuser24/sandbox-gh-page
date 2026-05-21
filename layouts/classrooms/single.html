@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article>
+    <span style="color: #4f46e5; font-weight: bold; text-transform: uppercase;">{{ .Params.subject }}</span>
+    <h1 style="font-size: 2.5rem; margin-top: 0.5rem;">{{ .Title }}</h1>
+    
+    <div style="background: #f1f5f9; padding: 1rem; border-radius: 6px; margin: 1.5rem 0;">
+        <p><strong>⏰ Schedule:</strong> {{ .Params.schedule }}</p>
+        <p><strong>👶 Target Age:</strong> {{ .Params.age_group }}</p>
+        <p><strong>💰 Tuition:</strong> {{ .Params.cost }}</p>
+    </div>
+
+    <div class="content">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}

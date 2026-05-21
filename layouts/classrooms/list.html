@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p>Browse our currently active learning sessions.</p>
+
+<div class="grid">
+    {{ range .Pages }}
+    <div class="card">
+        <span style="font-size: 0.8rem; background: #e0e7ff; color: #4f46e5; padding: 0.2rem 0.5rem; border-radius: 4px;">{{ .Params.subject }}</span>
+        <h2 style="margin: 0.5rem 0;">{{ .Title }}</h2>
+        <p>{{ .Summary }}</p>
+        <a href="{{ .Permalink }}" style="color: #4f46e5; font-weight: bold; text-decoration: none;">View Details &rarr;</a>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

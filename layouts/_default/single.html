@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="max-w-3xl mx-auto px-4 py-16">
+    <h1 class="text-4xl font-extrabold text-slate-900 mb-8 border-b border-slate-200 pb-4">{{ .Title }}</h1>
+    
+    <!-- Render raw markdown content cleanly -->
+    <div class="prose prose-slate lg:prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
+        {{ .Content }}
+    </div>
+</div>
+{{ end }}

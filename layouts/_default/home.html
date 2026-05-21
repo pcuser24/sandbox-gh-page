@@ -1,0 +1,16 @@
+{{ define "main" }}
+<header style="text-align: center; padding: 3rem 0; background: linear-gradient(to right, #4f46e5, #7c3aed); color: white; border-radius: 8px; margin-bottom: 2rem;">
+    <h1>Empowering Curious Minds</h1>
+    <p>{{ .Params.subtitle }}</p>
+</header>
+
+<h2>Why Choose Our Learning Space?</h2>
+<div class="grid">
+    {{ range .Params.selling_points }}
+    <div class="card">
+        <h3>{{ .icon }} {{ .title }}</h3>
+        <p>{{ .description }}</p>
+    </div>
+    {{ end }}
+</div>
+{{ end }}

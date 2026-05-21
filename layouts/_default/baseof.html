@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Title }}{{ end }}</title>
+    <!-- Direct link to the static file. Hugo automatically maps /static/ to the root / -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="/" style="font-weight: bold; margin-left: 0; color: #4f46e5;">Classroom Hub</a>
+        <div>
+            <a href="/classrooms/">Classrooms</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer>
+        &copy; {{ now.Format "2006" }} Classroom Hub.
+    </footer>
+
+</body>
+</html>
