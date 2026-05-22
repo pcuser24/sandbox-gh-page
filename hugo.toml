@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 locale = 'en-us'
-title = 'My New Hugo Project'
+title = 'Sandbox Hugo site'
 
 [build]
   [build.buildStats]
@@ -19,3 +19,7 @@ title = 'My New Hugo Project'
     disableWatch = true
     source = 'hugo_stats.json'
     target = 'assets/notwatching/hugo_stats.json'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
